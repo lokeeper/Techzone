@@ -10,7 +10,7 @@ import Smartorb from './smartorb/smartorb';
 import Footer from './Footer';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
-// Компонент главной страницы — выносим сюда весь контент, чтобы роутинг работал корректно
+// Компонент главной страницы
 function HomePage({
   setModalActive,
   setTovarActive,
@@ -32,7 +32,7 @@ function HomePage({
       <header className="App-header">
         <div className="header-logo">
           <Link to="/" className="logo-text">TECHZONE</Link>
-          <img src="/Frame.png" alt="Logo icon" className="logo-icon" />
+          <img src="/Frame.png" alt="Логотип TechZone" className="logo-icon" />
         </div>
 
         <div className="header-search">
@@ -46,20 +46,19 @@ function HomePage({
 
         <div className="header-actions">
           <div className="action-item" onClick={() => setloginActive(true)}>
-            <img src="/Vector.png" alt="Icon" className="action-icon" />
+            <img src="/Vector.png" alt="Иконка входа" className="action-icon" />
             <span>Войти</span>
           </div>
           <div className="action-item">
-            <img src="/hurt.png" alt="Icon" className="action-icon" />
+            <img src="/hurt.png" alt="Иконка избранного" className="action-icon" />
             <span>Избранное</span>
           </div>
           <div
             className="action-item action-item--cart"
-   
           >
             <img
               src="/Frame (1).png"
-              alt="Cart icon"
+              alt="Иконка корзины"
               className="action-icon1"
               onClick={() => setModalActive(true)}
             />
@@ -86,7 +85,6 @@ function HomePage({
               <button className="buy" onClick={HandleClick}>
                 Купить сейчас
               </button>
-              {/* Пример перехода на другую страницу — замени путь на нужный */}
               <Link to="/NotFound" style={{ display: 'block', textDecoration: 'none' }}>
                 <button className="more" type="button">Все хиты</button>
               </Link>
@@ -108,8 +106,8 @@ function HomePage({
           </div>
           <img
             src="/featured-hero-image.png"
+            alt="Ультрабук TechZone Pro"
             className="comp"
-            alt="Hero Image"
           />
         </section>
 
@@ -131,7 +129,7 @@ function HomePage({
               </p>
             </div>
             <button className="vse">
-              <img src="/Vector (3).png" alt="" /> Все хиты
+              <img src="/Vector (3).png" alt="Все хиты" /> Все хиты
             </button>
           </div>
 
@@ -140,7 +138,7 @@ function HomePage({
               className="CartN"
               onClick={() => setTovarActive(true)}
             >
-              <img src="/Numpad.png" className="img" alt="" />
+              <img src="/Numpad.png" alt="Ноутбук TechBook Pro 16 Extreme" className="img" />
               <p className="TechT">TechBook Pro 16 Extreme</p>
               <p className="infos">
                 M3 Max Ultra, 32GB RAM, 1TB SSD, 120Hz Liquid Retina XDR OLED
@@ -148,9 +146,9 @@ function HomePage({
               <p className="price">249 900₽</p>
               <img
                 src="/add-garbage.png"
+                alt="Добавить в корзину"
                 className="garbage"
                 onClick={HandleClick}
-                alt=""
               />
             </div>
 
@@ -158,7 +156,7 @@ function HomePage({
               className="CartP"
               onClick={() => setPhoneActive(true)}
             >
-              <img src="/Phone.png" className="img" alt="" />
+              <img src="/Phone.png" alt="Смартфон TechPhone 15 Ultra Max" className="img" />
               <p className="TechT">TechPhone 15 Ultra Max</p>
               <p className="infos">
                 Super Retina OLED 6.9", 200MP Camera, 512GB, Titanium Frame,
@@ -167,9 +165,9 @@ function HomePage({
               <p className="price">134 900₽</p>
               <img
                 src="/add-garbage.png"
+                alt="Добавить в корзину"
                 className="garbage"
                 onClick={HandleClicks}
-                alt=""
               />
             </div>
 
@@ -177,7 +175,7 @@ function HomePage({
               className="CartA"
               onClick={() => setHeadphonesActive(true)}
             >
-              <img src="/Airpods.png" className="img" alt="" />
+              <img src="/Airpods.png" alt="Наушники AuraSound Studio ANC" className="img" />
               <p className="TechT">AuraSound Studio ANC</p>
               <p className="infos">
                 Hi‑Res Audio, Hybrid ANC 45dB, 60h Battery, Spatial Head
@@ -186,9 +184,9 @@ function HomePage({
               <p className="price">29 900₽</p>
               <img
                 src="/add-garbage.png"
+                alt="Добавить в корзину"
                 className="garbage"
                 onClick={HandleClickd}
-                alt=""
               />
             </div>
 
@@ -196,7 +194,7 @@ function HomePage({
               className="CartB"
               onClick={() => setSmartorbActive(true)}
             >
-              <img src="/bols.png" className="img" alt="" />
+              <img src="/bols.png" alt="Умный хаб TechHub Smart Orb" className="img" />
               <p className="TechT">TechHub Smart Orb</p>
               <p className="infos">
                 Zigbee 3.0, voice assistant, home automation master controller
@@ -204,9 +202,9 @@ function HomePage({
               <p className="price">12 400₽</p>
               <img
                 src="/add-garbage.png"
+                alt="Добавить в корзину"
                 className="garbage"
                 onClick={HandleClicka}
-                alt=""
               />
             </div>
           </div>
@@ -225,10 +223,9 @@ function HomePage({
                 type="email"
                 placeholder="Введите ваш Email"
               />
-    <Link to="/NotFound" style={{margin:'10px', textDecoration: 'none' }}>
+              <Link to="/NotFound" style={{ margin: '10px', textDecoration: 'none' }}>
                 <button className="podp" type="button">Подписаться</button>
               </Link>
-              
             </div>
           </div>
         </section>
@@ -252,7 +249,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      {/* Модальные окна рендерятся поверх всего приложения */}
       <Modal active={ModalActive} setActive={setModalActive} />
       <Tovar
         active={TovarActive}
@@ -294,9 +290,6 @@ function App() {
             />
           }
         />
-
-
-
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

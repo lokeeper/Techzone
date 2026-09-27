@@ -1,6 +1,6 @@
 import React from "react";
 import "./Headphones.css"
-import { useState } from "react";
+
 function Headphones({active,setActive}){
 
  return(
@@ -36,7 +36,6 @@ function Headphones({active,setActive}){
             </div>
           </div>
 
-          {/* Карточка 2 */}
           <div className="feature-card">
             <span className="feature-icon">🔋</span>
             <div className="feature-info">
@@ -45,7 +44,6 @@ function Headphones({active,setActive}){
             </div>
           </div>
 
-          {/* Карточка 3 */}
           <div className="feature-card">
             <span className="feature-icon">🔇</span>
             <div className="feature-info">
@@ -71,7 +69,7 @@ function Headphones({active,setActive}){
           </p>
         </div>
 
-        {/* Цвет и кнопки (нижний блок) */}
+
         <div className="bottom-actions">
           <div className="color-picker">
             <span className="picker-label">ЦВЕТ МОДЕЛИ</span>

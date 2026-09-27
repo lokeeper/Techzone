@@ -1,6 +1,6 @@
 import React from "react";
 import "./Phone.css";
-import { useState } from 'react';
+
 
 const Phone = ({ active, setActive, onAdd134900 }) => {
 
