@@ -1,0 +1,81 @@
+.Modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.Modal.modal-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #18181B;
+  width: 640px;
+  height: 700px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Шапка в одну строку: Корзина — кнопка — крестик */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.garbage {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+/* Голубая кнопка с количеством */
+.count-btn {
+  background-color: #00F0FF; /* голубой цвет */
+  color: #ffffff;
+  border: 2px;
+  border-radius: 12px;
+  position: relative;
+    left: -200px;
+    width: 74px;
+    height: 23px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: default; /* если это просто счётчик, а не кнопка действия */
+  min-width: 40px;
+  text-align: center;
+}
+
+.close-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+/* Линия под шапкой на всю ширину */
+.hr-line-bottom {
+  width: 100%;
+  border: none;
+  height: 1px;
+  background-color: #444;
+  margin: 0;
+  box-sizing: border-box;
+}
